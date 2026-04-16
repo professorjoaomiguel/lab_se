@@ -21,3 +21,6 @@ env/
 
 # Logs
 *.log
+
+# Documentação e Livros (material de referência não distribuído)
+livros/

@@ -1,40 +1,32 @@
-# Experimento 5 — Sensor de Temperatura LM35
+# Experimento 5 — Sensor LM35
+# Professor: Prof. Me. João Miguel Lac Roehe
 # Aluno: ___________________________  Data: ___/___/______
 #
-# Objetivo: Medir a temperatura ambiente com o sensor LM35 e
-#           exibir o valor em graus Celsius no monitor serial.
-#
-# Instruções:
-#   1. Abra este arquivo no Thonny.
-#   2. Preencha os espaços marcados com TODO.
-#   3. Salve como main.py no dispositivo (Arquivo → Salvar como → Dispositivo MicroPython).
-#   4. Pressione F5 e observe as leituras no Shell.
-#
-# Referência de pinos:
-#   LM35 → GPIO 1 (ADC)
-#
-# Fórmulas:
-#   tensão (V)      = leitura / 4095 × 3.3
-#   temperatura (°C) = tensão / 0.01    (LM35: 10 mV por °C)
 # ---------------------------------------------------------------
+# ETAPA 1 (Intermediária): Converta 'leitura' em 'tensao' (V).
+# ETAPA 2 (Final): Use media_amostras() e exiba em Celsius.
+# ---------------------------------------------------------------
+
+# REFLEXÃO (Obrigatório):
+# Qual a importância de tirar a média de várias amostras (função media_amostras) 
+# antes de exibir a temperatura final? O que acontece com a oscilação do valor?
+# Resposta: _____________________________________________________
+# _______________________________________________________________
 
 from machine import Pin, ADC
 from time import sleep
+from utils import media_amostras
 
-# TODO: Configure o ADC no GPIO 1 com atenuação 11dB e resolução 12 bits
-lm35 = ADC(Pin(___))
-lm35.atten(___)
-lm35.width(___)
+lm35 = ADC(Pin(2))
+lm35.atten(ADC.ATTN_11DB)
 
 while True:
-    # TODO: Leia o valor bruto do ADC
-    leitura = lm35.___()
-
-    # TODO: Converta a leitura em tensão (0–3.3 V)
-    tensao = (leitura / ___) * ___
-
-    # TODO: Converta a tensão em temperatura usando a fórmula do LM35
-    temperatura = tensao / ___
-
-    print("Temperatura: {:.2f} °C".format(temperatura))
+    # TODO: Etapa 2 - leitura = media_amostras(lm35, 20)
+    leitura = lm35.read()
+    
+    # TODO: Etapa 1 - tensao = (leitura / 4095) * 3.3
+    
+    # TODO: temperatura = tensao / 0.01
+    
+    # print("Temp: {:.1f} C".format(temperatura))
     sleep(1)

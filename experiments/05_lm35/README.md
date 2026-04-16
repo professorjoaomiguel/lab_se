@@ -1,46 +1,18 @@
-# Experimento 5 — Sensor de Temperatura LM35
+# Experimento 05 — Sensor de Temperatura LM35
 
-## Objetivo
+## Objetivos
+1. **Intermediário:** Ler o valor analógico e convertê-lo matematicamente para Voltagem (V), comparando com a medida de um multímetro (se disponível).
+2. **Final:** Converter a voltagem para Temperatura (°C) e aplicar uma filtragem por **Média de Amostras** (20 leituras) para estabilizar o valor no terminal.
 
-Utilizar o sensor LM35 para medir a temperatura do ambiente e exibir o valor em graus Celsius no monitor serial.
+## Componentes
+- Sensor LM35 (GPIO 2)
+- [Datasheet do LM35](https://www.ti.com/lit/ds/symlink/lm35.pdf)
 
-## Componentes Utilizados
+## Entregáveis
+- Demonstração da temperatura no Shell com no máximo 0.5°C de oscilação.
+- Cálculo da escala (V/°C) documentado no código.
 
-| Componente | Pino GPIO |
-|------------|-----------|
-| LM35       | GPIO 1 (ADC) |
+---
 
-## Como Funciona
-
-O LM35 gera uma tensão de saída proporcional à temperatura: **10 mV por °C**.
-
-O ADC do ESP32 lê a tensão do sensor (0–3,3 V, resolução 12 bits = 0–4095) e converte para temperatura:
-
-```
-tensão (V) = leitura / 4095 × 3,3
-temperatura (°C) = tensão / 0,01   (10 mV/°C = 0,01 V/°C)
-```
-
-A leitura é atualizada a cada 1 segundo.
-
-## Circuito
-
-O sensor LM35 já está integrado no Shield. Nenhuma ligação externa é necessária.
-
-## Código
-
-Carregue o arquivo `main.py` no ESP32 e abra o monitor serial para acompanhar as leituras de temperatura.
-
-## Exemplo de Saída Serial
-
-```
-Temperatura: 27.45 °C
-Temperatura: 27.52 °C
-Temperatura: 28.01 °C
-```
-
-## 📖 Referência Bibliográfica
-
-> **IoT com MicroPython e NodeMCU** — Oliveira & Zanetti, Novatec 2022  
-> **Capítulo 3** — Portas de entrada e saída › **Conversor analógico digital** e **Medidor de temperatura com termístor**  
-> Disponível na biblioteca para consulta presencial.
+## 🤖 Dica de Prompt para IA
+> "Estou no Experimento 05. Tenho um sensor LM35 (analógico) e um ESP32. **Não me dê o código.** Explique como converter a leitura bruta do ADC (0 a 4095) para Voltagem, considerando que o ESP32 usa 3.3V, e depois como converter essa voltagem para Graus Celsius seguindo a regra de 10mV/°C do LM35. Além disso, me dê uma pista de como fazer uma média simples de leituras para que a temperatura não oscile tanto no monitor."
