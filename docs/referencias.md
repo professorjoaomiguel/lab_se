@@ -28,13 +28,16 @@ O livro está disponível na **biblioteca** para consulta presencial.
 | · | LED RGB | [Exp. 03 – LED RGB com LDR](../experiments/03_rgb_ldr/) |
 | · | Conversor analógico digital (ADC) | [Exp. 02 – Fotocélula e LEDs](../experiments/02_ldr_leds/), [Exp. 06 – Potenciômetro](../experiments/06_potenciometro/) |
 | · | Medidor de intensidade luminosa | [Exp. 02 – Fotocélula e LEDs](../experiments/02_ldr_leds/), [Exp. 03 – LED RGB com LDR](../experiments/03_rgb_ldr/) |
-| · | Medidor de temperatura com termístor | [Exp. 05 – Sensor LM35](../experiments/05_lm35/) |
+| · | Medidor de temperatura com termístor | [Exp. 05 – Sensor LM35](../experiments/05_lm35/), [Exp. 10 – Termostato LED](../experiments/10_termostato_led/) |
+| · | Conversor analógico digital (ADC) + PWM (modo noturno) | [Exp. 11 – Modo Noturno](../experiments/11_modo_noturno/) |
+| · | PWM + Entrada digital (dimmer) | [Exp. 08 – Dimmer por Botões](../experiments/08_dimmer_botoes/) |
+| · | Variáveis de estado e seleção | [Exp. 09 – Contador de Eventos](../experiments/09_contador_eventos/) |
 | 4 | Orientação a objetos — Classes, Herança, Display de 7 segmentos | Base para expansão dos experimentos |
-| 5 | Comunicação em rede — Wi-Fi integrado, Soquetes, Controle pela internet | Expansão futura |
+| 5 | Comunicação em rede — Wi-Fi integrado, Soquetes, Controle pela internet | [Exp. 15 – Controle de LED via Web](../experiments/15_led_wifi/) |
 | 6 | Displays — LCD I2C, 7 segmentos, OLED | Expansão futura |
-| 7 | Redes de sensores — I²C, 1-Wire, MQTT | Expansão futura |
-| 8 | Node-RED | Expansão futura |
+| 7 | Redes de sensores — I²C, 1-Wire, MQTT | [Exp. 16 – Monitoramento via MQTT](../experiments/16_mqtt_temperatura/) |
+| 8 | Node-RED | [Exp. 16 – Monitoramento via MQTT](../experiments/16_mqtt_temperatura/) |
 | 9 | IBM Watson IoT Platform | Expansão futura |
-| 10 | ThingSpeak | Expansão futura |
+| 10 | ThingSpeak | [Exp. 17 – Dashboard no ThingSpeak](../experiments/17_thingspeak/) |
 | 11 | IFTTT | Expansão futura |
-| 12 | Interrupções, temporizadores e threads — Sensor de presença, Deep sleep | Expansão futura |
+| 12 | Interrupções, temporizadores e threads — Sensor de presença, Deep sleep | [Exp. 07 – Semáforo com Timer](../experiments/07_semaforo_timer/), [Exp. 12 – IRQ Botões](../experiments/12_irq_botoes/), [Exp. 13 – Timer Pisca](../experiments/13_timer_pisca/), [Exp. 14 – Deep Sleep](../experiments/14_deep_sleep/) |
