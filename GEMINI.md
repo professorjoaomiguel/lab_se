@@ -1,45 +1,42 @@
-# GEMINI.md — Contexto do Projeto Lab SE
+# GEMINI.md — Diretrizes e Contexto do Lab SE
 
-Este repositório é um laboratório prático para o ensino de **Sistemas Embarcados**, focado no uso do microcontrolador **ESP32** com a linguagem **MicroPython**. O hardware base utilizado é o **Shield 9-em-1**.
-
-## 🚀 Visão Geral do Projeto
-
-O objetivo do projeto é fornecer uma base estruturada de experimentos práticos. A língua oficial de toda a documentação e comentários deste repositório é o **Português (Brasil)**.
-
-### Tecnologias Principais
-- **Hardware:** ESP32 (NodeMCU) + Shield 9-em-1.
-- **Linguagem:** MicroPython.
-- **IDE Principal:** Thonny IDE.
+Este documento estabelece as regras de ouro, padrões técnicos e diretrizes pedagógicas para o desenvolvimento do repositório **Lab SE**. Qualquer interação deve seguir rigorosamente estes combinados.
 
 ---
 
-## 💻 Ferramenta de Desenvolvimento: Thonny IDE
+## 🇧🇷 Língua Oficial
+- Toda a documentação, READMEs, comentários de código e mensagens de commit devem ser em **Português (Brasil)**.
+- Exceções: Comandos de sistema, palavras-chave da linguagem Python e termos técnicos universais.
 
-A [Thonny IDE](https://thonny.org/) é a ferramenta recomendada para este laboratório.
+## 🎓 Metodologia Pedagógica: "IA como Mentor"
+O objetivo é que o aluno desenvolva autonomia. Para isso:
+1. **Estrutura em Etapas:** Todo experimento deve ter uma **Etapa Intermediária** (validação técnica) e uma **Etapa Final** (projeto aplicado).
+2. **Reflexão Obrigatória:** Arquivos `template.py` devem conter uma seção de reflexão técnica para evitar o "copia e cola" sem entendimento.
+3. **Prompts de IA:** Cada README deve sugerir um prompt que peça à IA para atuar como tutor (explicar conceitos e dar pistas) em vez de resolver o exercício.
+4. **Validação Oral:** O professor reserva-se o direito de pedir explicações sobre qualquer linha de código.
 
-### Atalhos Essenciais no Thonny:
-- **F5:** Executa o script atual no ESP32.
-- **Ctrl + C:** Interrompe a execução do script (envia um KeyboardInterrupt para o REPL).
-- **Ctrl + D:** Realiza um Soft Reset no ESP32.
-- **Ctrl + S:** Salva o arquivo atual.
+## 🛠️ Padrões Técnicos (ESP32 + MicroPython)
+- **Hardware Base:** ESP32 (UNO Form Factor) + Shield Multifuncional 9-em-1.
+- **Mapeamento de Pinos (Fonte da Verdade):**
+  - Botões: SW1 (18), SW2 (17) — Pull-up interno.
+  - LEDs: Azul (12), Vermelho (13).
+  - LED RGB: Red (9), Green (10), Blue (11).
+  - Sensores Analógicos: Potenciômetro (36), LDR (1), LM35 (2).
+  - Sensores Digitais: DHT11 (4), Buzzer (5).
+- **ADC:** Usar sempre `ADC.ATTN_11DB` e `ADC.WIDTH_12BIT`.
+- **Modularização:** Funções genéricas devem estar em `lib/utils.py`.
 
-### Fluxo de Trabalho:
-1. Conecte o ESP32 via USB.
-2. Em **Configurações -> Interpretador**, selecione **MicroPython (ESP32)**.
-3. Para que um código rode automaticamente ao ligar a placa, salve-o no dispositivo com o nome `main.py`.
+## 💻 Fluxo de Trabalho (Git & IDE)
+- **IDE:** Thonny IDE é a ferramenta padrão.
+- **Atalhos Thonny:** F5 (Executar), Ctrl+C (Interromper), Ctrl+D (Soft Reset).
+- **Git para Alunos:**
+  1. `git clone` do repositório.
+  2. Criar branch pessoal: `git checkout -b seu-nome-sobrenome`.
+  3. Resolver no `template.py`.
+  4. Commits descritivos.
+
+## 🔐 Privacidade e Ideias
+- Notas pedagógicas, bugs intencionais e planos de aula "de bastidores" devem ser mantidos no arquivo local **`IDEIAS.md`** (localizado fora do repositório Git) para garantir a privacidade do professor.
 
 ---
-
-## 📂 Estrutura do Repositório
-
-- `/experiments`: Atividades práticas. Cada pasta possui um `README.md` (instruções), um `template.py` (exercício para o aluno) e um `main.py` (solução).
-- `/lib`: Módulos reutilizáveis como `utils.py`.
-- `/docs`: Guias detalhados de pinagem e instalação.
-
----
-
-## 📝 Convenções de Desenvolvimento
-
-- **Idioma:** Documentação, READMEs e comentários de código devem ser em **Português**.
-- **Exercícios:** Alunos devem clonar o repositório e completar os arquivos `template.py`.
-- **Bibliotecas:** Funções comuns (como `map_value` ou `debounce`) devem ser importadas de `lib/utils.py`.
+*Documento atualizado em 16 de Abril de 2026.*
