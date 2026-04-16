@@ -22,3 +22,9 @@ Os LEDs já estão integrados no Shield. Nenhuma ligação externa é necessári
 ## Código
 
 Carregue o arquivo `main.py` no ESP32. Os LEDs começarão a piscar imediatamente após a inicialização.
+
+## 📖 Referência Bibliográfica
+
+> **IoT com MicroPython e NodeMCU** — Oliveira & Zanetti, Novatec 2022  
+> **Capítulo 3** — Portas de entrada e saída › **Saída digital** e **Simulação de um semáforo**  
+> Disponível na biblioteca para consulta presencial.

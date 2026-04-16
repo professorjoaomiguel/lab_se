@@ -43,16 +43,24 @@ lab_se/
    - Salve como `main.py` **no dispositivo** (**Arquivo → Salvar como → Dispositivo MicroPython**).
    - Pressione **F5** para executar e acompanhe o resultado no painel *Shell*.
 
+## 📖 Livro de Referência
+
+> **IoT com MicroPython e NodeMCU**  
+> Cláudio Luís Vieira Oliveira · Humberto A. Piovesana Zanetti — Novatec, 2022  
+> ISBN: 978-65-86057-86-7
+
+O livro está disponível na **biblioteca** para consulta. Cada experimento indica a seção correspondente. Veja o índice completo em [docs/referencias.md](docs/referencias.md).
+
 ## 📋 Lista de Experimentos
 
-| # | Experimento | Descrição |
-|---|-------------|-----------|
-| 01 | [Botões](experiments/01_botoes/) | Reconhecer qual botão do Shield foi pressionado |
-| 02 | [Fotocélula e LEDs](experiments/02_ldr_leds/) | LED vermelho na luz máxima, azul caso contrário |
-| 03 | [LED RGB com LDR](experiments/03_rgb_ldr/) | LED vermelho em luz forte, verde caso contrário |
-| 04 | [Pisca-pisca](experiments/04_pisca_pisca/) | Piscar alternadamente os LEDs do Shield |
-| 05 | [Sensor LM35](experiments/05_lm35/) | Medir temperatura ambiente com o LM35 |
-| 06 | [Potenciômetro](experiments/06_potenciometro/) | Dimerizaçāo do LED RGB com potenciômetro |
+| # | Experimento | Descrição | Seção do Livro |
+|---|-------------|-----------|----------------|
+| 01 | [Botões](experiments/01_botoes/) | Reconhecer qual botão do Shield foi pressionado | Cap. 3 — Entrada digital |
+| 02 | [Fotocélula e LEDs](experiments/02_ldr_leds/) | LED vermelho na luz máxima, azul caso contrário | Cap. 3 — ADC · Medidor de intensidade luminosa |
+| 03 | [LED RGB com LDR](experiments/03_rgb_ldr/) | LED vermelho em luz forte, verde caso contrário | Cap. 3 — PWM · LED RGB · Medidor de intensidade luminosa |
+| 04 | [Pisca-pisca](experiments/04_pisca_pisca/) | Piscar alternadamente os LEDs do Shield | Cap. 3 — Saída digital |
+| 05 | [Sensor LM35](experiments/05_lm35/) | Medir temperatura ambiente com o LM35 | Cap. 3 — Medidor de temperatura com termístor |
+| 06 | [Potenciômetro](experiments/06_potenciometro/) | Dimerização do LED RGB com potenciômetro | Cap. 3 — Conversor analógico digital |
 
 ## 📚 Recursos Úteis
 

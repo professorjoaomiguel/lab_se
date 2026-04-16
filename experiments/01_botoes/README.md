@@ -33,3 +33,9 @@ SW1 pressionado
 SW2 pressionado
 SW1 pressionado
 ```
+
+## 📖 Referência Bibliográfica
+
+> **IoT com MicroPython e NodeMCU** — Oliveira & Zanetti, Novatec 2022  
+> **Capítulo 3** — Portas de entrada e saída › **Entrada digital**  
+> Disponível na biblioteca para consulta presencial.

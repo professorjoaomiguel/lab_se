@@ -38,3 +38,9 @@ Temperatura: 27.45 °C
 Temperatura: 27.52 °C
 Temperatura: 28.01 °C
 ```
+
+## 📖 Referência Bibliográfica
+
+> **IoT com MicroPython e NodeMCU** — Oliveira & Zanetti, Novatec 2022  
+> **Capítulo 3** — Portas de entrada e saída › **Conversor analógico digital** e **Medidor de temperatura com termístor**  
+> Disponível na biblioteca para consulta presencial.

@@ -39,3 +39,9 @@ LDR: 850
 LDR: 1650
 LDR: 3100
 ```
+
+## 📖 Referência Bibliográfica
+
+> **IoT com MicroPython e NodeMCU** — Oliveira & Zanetti, Novatec 2022  
+> **Capítulo 3** — Portas de entrada e saída › **Modulação por largura de pulso (PWM)**, **LED RGB** e **Medidor de intensidade luminosa**  
+> Disponível na biblioteca para consulta presencial.

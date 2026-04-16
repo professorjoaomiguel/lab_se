@@ -35,3 +35,9 @@ Luz: 3256
 Luz: 1450
 Luz: 980
 ```
+
+## 📖 Referência Bibliográfica
+
+> **IoT com MicroPython e NodeMCU** — Oliveira & Zanetti, Novatec 2022  
+> **Capítulo 3** — Portas de entrada e saída › **Conversor analógico digital** e **Medidor de intensidade luminosa**  
+> Disponível na biblioteca para consulta presencial.

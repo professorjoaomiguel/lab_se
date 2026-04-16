@@ -37,3 +37,9 @@ Bruto: 0   |  0 %
 Bruto: 2048  |  50 %
 Bruto: 4095  |  100 %
 ```
+
+## 📖 Referência Bibliográfica
+
+> **IoT com MicroPython e NodeMCU** — Oliveira & Zanetti, Novatec 2022  
+> **Capítulo 3** — Portas de entrada e saída › **Conversor analógico digital**  
+> Disponível na biblioteca para consulta presencial.

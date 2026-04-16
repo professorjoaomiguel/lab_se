@@ -2,6 +2,10 @@
 
 Este guia descreve os passos para configurar o ambiente de desenvolvimento para programar o ESP32 com MicroPython.
 
+> 📖 **Referência:** *IoT com MicroPython e NodeMCU* — Oliveira & Zanetti, Novatec 2022  
+> **Capítulo 1** — NodeMCU e MicroPython › Programas utilizados · Atualização do firmware  
+> Disponível na biblioteca para consulta presencial.
+
 ---
 
 ## 1. Pré-requisitos
