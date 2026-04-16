@@ -1,45 +1,18 @@
-# Experimento 6 — Dimer com Potenciômetro
+# Experimento 06 — Dimer com Potenciômetro
 
-## Objetivo
+## Objetivos
+1. **Intermediário:** Realizar a leitura do potenciômetro e converter o valor bruto (0-4095) para uma escala percentual (0-100%).
+2. **Final:** Implementar um controle de intensidade (Dimer) para o LED Azul (D12), onde o giro do potenciômetro controla suavemente o brilho do LED via PWM.
 
-Utilizar o potenciômetro para controlar (dimerizar) a intensidade luminosa do LED RGB via leitura analógica.
+## Componentes
+- Potenciômetro (GPIO 36)
+- LED Azul (GPIO 12 - PWM)
 
-## Componentes Utilizados
+## Entregáveis
+- Código integrando leitura analógica, mapeamento e saída PWM.
+- Demonstração do LED variando de 0% a 100% de brilho.
 
-| Componente      | Pino GPIO |
-|-----------------|-----------|
-| Potenciômetro   | GPIO 2 (ADC) |
+---
 
-## Como Funciona
-
-O potenciômetro é lido pelo ADC (0–4095, 12 bits, faixa até ~3,3 V com `ATTN_11DB`). O valor bruto é convertido para percentual (0–100%) e exibido no monitor serial.
-
-Para controlar o brilho de um LED com PWM, o valor lido (0–4095) pode ser mapeado para a escala do `duty()` (0–1023):
-
-```python
-duty = int((valor / 4095) * 1023)
-led_pwm.duty(duty)
-```
-
-## Circuito
-
-O potenciômetro já está integrado no Shield. Nenhuma ligação externa é necessária.
-
-## Código
-
-Carregue o arquivo `main.py` no ESP32 e abra o monitor serial para acompanhar os valores lidos.
-
-## Exemplo de Saída Serial
-
-```
-Lendo potenciômetro no GPIO 2
-Bruto: 0   |  0 %
-Bruto: 2048  |  50 %
-Bruto: 4095  |  100 %
-```
-
-## 📖 Referência Bibliográfica
-
-> **IoT com MicroPython e NodeMCU** — Oliveira & Zanetti, Novatec 2022  
-> **Capítulo 3** — Portas de entrada e saída › **Conversor analógico digital**  
-> Disponível na biblioteca para consulta presencial.
+## 🤖 Dica de Prompt para IA
+> "Estou no Experimento 06. Preciso criar um 'Dimer' onde o potenciômetro controla o brilho de um LED no MicroPython. **Não me dê o código.** Como eu faço a ponte entre a leitura do ADC (potenciômetro) e a configuração do duty cycle do PWM (LED)? Quais funções do módulo `machine` eu devo pesquisar?"
