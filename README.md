@@ -4,12 +4,12 @@ Descrição do repositório.
 
 ## Introdução
 
-Repositório para experimentos práticos na área de Sistemas Embarcados.
+Repositório para experimentos práticos na área de Sistemas Embarcados com ESP32 e MicroPython, utilizando o [Shield 9-em-1](docs/shield_9in1.md).
 
 ## Estrutura
 
 - **src**: Código-fonte.
-- **doc**: Documentação.
+- **doc**: Documentação (ver também [`docs/shield_9in1.md`](docs/shield_9in1.md) e [`docs/esp32_pinout.md`](docs/esp32_pinout.md)).
 
 ## Instruções para uso
 
