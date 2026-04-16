@@ -11,11 +11,16 @@ Repositório base para experimentos práticos da disciplina de **Sistemas Embarc
 
 ```
 lab_se/
+├── boot.py                       # Inicialização automática do ESP32
 ├── docs/                         # Documentação e guias de referência
 │   ├── setup.md                  # Guia de instalação do ambiente
+│   ├── thonny.md                 # Guia passo a passo do Thonny IDE
 │   └── esp32_pinout.md           # Mapeamento de pinos do ESP32
 ├── experiments/                  # Experimentos práticos
 │   ├── 01_botoes/                # Exp. 01 – Leitura de botões
+│   │   ├── template.py           #   ← ponto de partida para o aluno
+│   │   ├── main.py               #   ← solução de referência
+│   │   └── README.md
 │   ├── 02_ldr_leds/              # Exp. 02 – Fotocélula e LEDs
 │   ├── 03_rgb_ldr/               # Exp. 03 – LED RGB com LDR e PWM
 │   ├── 04_pisca_pisca/           # Exp. 04 – Pisca-pisca com LEDs
@@ -27,9 +32,16 @@ lab_se/
 
 ## 🚀 Como Começar
 
-1. Leia o [Guia de Instalação](docs/setup.md) para preparar o ambiente.
-2. Consulte o [Mapeamento de Pinos](docs/esp32_pinout.md) antes de montar os circuitos.
-3. Acesse a pasta do experimento desejado em `experiments/` e siga as instruções do `README.md` local.
+> **IDE utilizada: [Thonny](https://thonny.org/)** — veja o [Guia do Thonny](docs/thonny.md) para configuração completa.
+
+1. Instale o Thonny e grave o firmware MicroPython seguindo o [Guia de Instalação](docs/setup.md).
+2. Configure o interpretador **MicroPython (ESP32)** no Thonny (**Ferramentas → Opções → Interpretador**).
+3. Consulte o [Mapeamento de Pinos](docs/esp32_pinout.md) antes de montar os circuitos.
+4. Para cada experimento:
+   - Abra o `template.py` no Thonny.
+   - Leia o `README.md` do experimento e preencha os `# TODO`.
+   - Salve como `main.py` **no dispositivo** (**Arquivo → Salvar como → Dispositivo MicroPython**).
+   - Pressione **F5** para executar e acompanhe o resultado no painel *Shell*.
 
 ## 📋 Lista de Experimentos
 
@@ -48,10 +60,6 @@ lab_se/
 - [Firmware MicroPython para ESP32](https://micropython.org/download/ESP32_GENERIC/)
 - [Thonny IDE](https://thonny.org/) — IDE recomendada para iniciantes
 - [esptool](https://github.com/espressif/esptool) — Ferramenta para gravar firmware
-
-## 📝 Licença
-
-Este repositório é disponibilizado para fins educacionais.
 
 
 Repositório base para experimentos práticos da disciplina de **Sistemas Embarcados**.
