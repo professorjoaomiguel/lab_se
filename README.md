@@ -20,7 +20,7 @@ O **Lab SE** foi estruturado para fornecer uma trilha de aprendizado prática, p
 ## 🛠️ Requisitos e Ferramentas
 
 ### Hardware
-- **ESP32** (Form Factor Arduino UNO).
+- **ESP32 UNO** (Consulte a [**Documentação Técnica do ESP32**](docs/esp32_tecnico.md)).
 - **Shield 9-em-1** (Consulte a [**Documentação Técnica dos Componentes**](docs/componentes.md)).
 
 ### Software (Língua Oficial: Português)
