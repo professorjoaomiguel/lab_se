@@ -4,7 +4,7 @@ Repositório base para experimentos práticos da disciplina de **Sistemas Embarc
 
 ## 🔧 Plataforma
 
-- **Hardware:** Placa ESP32 com form factor Arduino UNO + Shield de experimentos
+- **Hardware:** Placa ESP32 com form factor Arduino UNO + [Shield 9-em-1](docs/shield_9in1.md)
 - **Linguagem:** [MicroPython](https://micropython.org/)
 
 ## 📁 Estrutura do Repositório
@@ -15,7 +15,8 @@ lab_se/
 ├── docs/                         # Documentação e guias de referência
 │   ├── setup.md                  # Guia de instalação do ambiente
 │   ├── thonny.md                 # Guia passo a passo do Thonny IDE
-│   └── esp32_pinout.md           # Mapeamento de pinos do ESP32
+│   ├── esp32_pinout.md           # Mapeamento de pinos do ESP32
+│   └── shield_9in1.md            # Placa de expansão 9-em-1 (periféricos e pinout)
 ├── experiments/                  # Experimentos práticos
 │   ├── 01_botoes/                # Exp. 01 – Leitura de botões
 │   │   ├── template.py           #   ← ponto de partida para o aluno
@@ -36,7 +37,8 @@ lab_se/
 
 1. Instale o Thonny e grave o firmware MicroPython seguindo o [Guia de Instalação](docs/setup.md).
 2. Configure o interpretador **MicroPython (ESP32)** no Thonny (**Ferramentas → Opções → Interpretador**).
-3. Consulte o [Mapeamento de Pinos](docs/esp32_pinout.md) antes de montar os circuitos.
+3. Consulte o [Shield 9-em-1](docs/shield_9in1.md) para conhecer os periféricos da placa.
+4. Consulte o [Mapeamento de Pinos](docs/esp32_pinout.md) antes de montar os circuitos.
 4. Para cada experimento:
    - Abra o `template.py` no Thonny.
    - Leia o `README.md` do experimento e preencha os `# TODO`.
