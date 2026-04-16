@@ -1,0 +1,23 @@
+# MicroPython / Python bytecode
+*.pyc
+__pycache__/
+
+# Arquivos temporários de editores
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Ambiente virtual Python (usado apenas em tooling local)
+.venv/
+venv/
+env/
+
+# Arquivos de configuração de IDEs
+.vscode/
+.idea/
+*.iml
+
+# Logs
+*.log
