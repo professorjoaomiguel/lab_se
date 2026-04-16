@@ -2,13 +2,15 @@
 
 ## Objetivo
 
-Simular um semáforo usando os LEDs D12 (verde) e D13 (vermelho) do Shield com temporização precisa via `machine.Timer`, eliminando bloqueios causados por `sleep()`.
+Simular um semáforo usando os LEDs D12 (representa verde) e D13 (vermelho) do Shield com temporização precisa via `machine.Timer`, eliminando bloqueios causados por `sleep()`.
+
+> **Nota:** O LED D12 é fisicamente azul no Shield. Neste experimento ele representa a fase verde do semáforo.
 
 ## Componentes Utilizados
 
 | Componente          | Pino GPIO |
 |---------------------|-----------|
-| LED azul/verde (D12) | GPIO 12  |
+| LED D12 (verde no semáforo) | GPIO 12  |
 | LED vermelho (D13)  | GPIO 13   |
 
 ## Como Funciona

@@ -19,7 +19,7 @@
 # ---------------------------------------------------------------
 
 import network
-import socket
+import socket  # necessário para criar o servidor TCP (mqtt_connect usa socket diretamente)
 from machine import Pin, ADC
 from time import sleep
 

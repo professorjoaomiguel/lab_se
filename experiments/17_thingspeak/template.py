@@ -28,14 +28,12 @@ SENHA = "___"
 WRITE_API_KEY = "___"  # TODO: cole aqui sua Write API Key
 URL = "https://api.thingspeak.com/update"
 
+# Nota de hardware: no Shield, LM35 e LDR compartilham o GPIO 1 (A1).
+# Use o mesmo objeto ADC para ambos os campos.
 # TODO: Configure o ADC no GPIO 1 com atenuação 11dB e resolução 12 bits
-lm35 = ADC(Pin(___))
-lm35.atten(___)
-lm35.width(___)
-
-ldr = ADC(Pin(___))
-ldr.atten(___)
-ldr.width(___)
+adc = ADC(Pin(___))
+adc.atten(___)
+adc.width(___)
 
 
 def conectar_wifi():
@@ -56,13 +54,13 @@ conectar_wifi()
 print("Enviando dados ao ThingSpeak a cada 15 s...")
 
 while True:
-    leitura_temp = lm35.read()
+    leitura_temp = adc.read()
     # TODO: Converta leitura_temp para temperatura em °C
     tensao = (leitura_temp / ___) * ___
     temperatura = tensao / ___
 
-    # TODO: Leia o valor do LDR
-    leitura_ldr = ldr.___()
+    # TODO: Leia o valor do ADC novamente para a luminosidade
+    leitura_ldr = adc.___()
 
     # TODO: Monte a URL com os parâmetros api_key, field1 e field2
     params = "?api_key={}&field1={:.2f}&field2={}".format(

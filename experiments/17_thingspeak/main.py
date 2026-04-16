@@ -14,13 +14,12 @@ URL = "https://api.thingspeak.com/update"
 # field1 = temperatura (LM35), field2 = luminosidade (LDR)
 # ---------------------------------------------------------------
 
-lm35 = ADC(Pin(1))
-lm35.atten(ADC.ATTN_11DB)
-lm35.width(ADC.WIDTH_12BIT)
-
-ldr = ADC(Pin(1))  # compartilha GPIO 1; leituras alternadas
-ldr.atten(ADC.ATTN_11DB)
-ldr.width(ADC.WIDTH_12BIT)
+# Nota de hardware: no Shield, LM35 e LDR estão ambos ligados ao GPIO 1 (A1).
+# O mesmo objeto ADC é reutilizado para ambas as leituras — o sinal lido
+# reflete o sensor fisicamente presente no circuito naquele momento.
+adc = ADC(Pin(1))
+adc.atten(ADC.ATTN_11DB)
+adc.width(ADC.WIDTH_12BIT)
 
 
 def conectar_wifi():
@@ -41,11 +40,11 @@ conectar_wifi()
 print("Enviando dados ao ThingSpeak a cada 15 s...")
 
 while True:
-    leitura_temp = lm35.read()
+    leitura_temp = adc.read()
     tensao = (leitura_temp / 4095) * 3.3
     temperatura = tensao / 0.01
 
-    leitura_ldr = ldr.read()
+    leitura_ldr = adc.read()
 
     params = "?api_key={}&field1={:.2f}&field2={}".format(
         WRITE_API_KEY, temperatura, leitura_ldr

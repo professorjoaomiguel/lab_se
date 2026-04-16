@@ -49,6 +49,8 @@ a.off{{background:#cc3300}}</style></head>
 
 srv = socket.socket()
 srv.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+# Bind em todas as interfaces ("") é intencional: o ESP32 precisa aceitar
+# conexões da rede local. Restrinja o IP se quiser limitar o acesso.
 srv.bind(("", 80))
 srv.listen(1)
 

@@ -63,6 +63,8 @@ HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n
 # TODO: Crie um socket TCP, faça bind na porta 80 e coloque em listen
 srv = socket.socket()
 srv.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+# Bind em todas as interfaces ("") é intencional: o ESP32 precisa aceitar
+# conexões vindas da rede local via Wi-Fi.
 srv.bind(("", ___))  # TODO: porta HTTP padrão
 srv.listen(___)       # TODO: fila de conexões (ex.: 1)
 
