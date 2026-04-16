@@ -56,6 +56,42 @@ Os laboratórios estão organizados na pasta `experiments/`. Cada experimento se
 
 ---
 
+## 🚀 Como Iniciar as Atividades
+
+Siga os passos abaixo para preparar seu ambiente e começar os experimentos:
+
+1. **Clone este repositório:**
+   Abra o terminal e digite:
+   ```bash
+   git clone https://github.com/professorjoaomiguel/lab_se.git
+   cd lab_se
+   ```
+
+2. **Crie sua branch pessoal:**
+   Para organizar seu trabalho, crie uma branch com seu nome completo (sem espaços):
+   ```bash
+   git checkout -b seu-nome-sobrenome
+   ```
+
+3. **Configure o ESP32:** Siga o [Guia de Setup](docs/setup.md) para gravar o firmware MicroPython.
+
+4. **Suba a biblioteca utilitária:** No Thonny, salve o arquivo `lib/utils.py` na raiz do seu dispositivo ESP32.
+
+5. **Desenvolva os Experimentos:**
+   - Escolha o experimento da semana (ex: `experiments/01_pisca_pisca/`).
+   - Abra o `template.py` e preencha seu nome e data.
+   - Complete os desafios indicados nos comentários `# TODO`.
+   - Teste no hardware pressionando **F5** no Thonny.
+   - Responda à **Reflexão Obrigatória** no final do arquivo.
+
+6. **Salve seu progresso (Commit):**
+   ```bash
+   git add .
+   git commit -m "Concluído experimento X"
+   ```
+
+---
+
 ## 🤖 Uso de Inteligência Artificial
 Incentivamos o uso da IA como tutor. Antes de começar, leia o [**Guia de Uso Saudável de IA**](docs/guia_ia.md). Lembre-se: o código deve ser seu, a IA apenas te ajuda a entender o caminho.
 
