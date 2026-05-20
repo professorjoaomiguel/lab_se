@@ -1,4 +1,4 @@
-# Experimento 6 — Dimer com Potenciômetro
+# Experimento 06 — Dimer com Potenciômetro
 # Professor: Prof. Me. João Miguel Lac Roehe
 # Aluno: ___________________________  Data: ___/___/______
 #

@@ -1,4 +1,4 @@
-# Experimento 3 — LDR e Histerese
+# Experimento 03 — Fotocélula (LDR) e Histerese
 # Professor: Prof. Me. João Miguel Lac Roehe
 # Aluno: ___________________________  Data: ___/___/______
 #

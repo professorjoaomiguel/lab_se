@@ -1,4 +1,4 @@
-# Experimento 8 — Sensor DHT11 (Digital)
+# Experimento 08 — Temperatura e Umidade com DHT11
 # Professor: Prof. Me. João Miguel Lac Roehe
 # Aluno: ___________________________  Data: ___/___/______
 #

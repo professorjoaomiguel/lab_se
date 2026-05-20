@@ -1,4 +1,4 @@
-# Experimento 2 — Botões
+# Experimento 02 — Botões e Interação
 # Professor: Prof. Me. João Miguel Lac Roehe
 # Aluno: ___________________________  Data: ___/___/______
 #

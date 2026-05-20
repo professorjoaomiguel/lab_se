@@ -1,4 +1,4 @@
-# Experimento 5 — Sensor LM35
+# Experimento 05 — Sensor de Temperatura LM35
 # Professor: Prof. Me. João Miguel Lac Roehe
 # Aluno: ___________________________  Data: ___/___/______
 #

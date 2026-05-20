@@ -1,4 +1,4 @@
-# Experimento 1 — Pisca-pisca com LEDs
+# Experimento 01 — Pisca-pisca com LEDs
 # Professor: Prof. Me. João Miguel Lac Roehe
 # Aluno: ___________________________  Data: ___/___/______
 #

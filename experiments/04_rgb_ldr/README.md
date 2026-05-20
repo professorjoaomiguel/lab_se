@@ -2,7 +2,7 @@
 
 ## Objetivos
 1. **Intermediário:** Configurar um canal PWM e validar o controle de brilho (duty cycle) do LED Verde.
-2. **Final:** Criar um sistema de iluminação inteligente onde o brilho do LED RGB se ajusta automaticamente à luz ambiente usando a função `map_value` da biblioteca `utils`.
+2. **Final:** Criar um sistema de iluminação inteligente onde o brilho do LED RGB (canal Verde) se ajusta automaticamente à luz ambiente usando a função `map_value` da biblioteca `utils`.
 
 ## Componentes
 - LED Verde RGB (GPIO 10)

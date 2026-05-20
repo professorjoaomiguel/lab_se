@@ -1,4 +1,4 @@
-# Experimento 7 — Buzzer e Sons
+# Experimento 07 — Buzzer e Frequência
 # Professor: Prof. Me. João Miguel Lac Roehe
 # Aluno: ___________________________  Data: ___/___/______
 #
@@ -21,6 +21,9 @@ buzzer = PWM(Pin(5))
 
 # TODO: Configure SW1 e SW2
 sw1 = Pin(18, Pin.IN, Pin.PULL_UP)
+
+# TODO: Etapa 1 - Faça o buzzer emitir um som fixo por 1s (fora do loop)
+# (Dica: configure a frequência, ligue com duty 512, aguarde 1s e desligue com duty 0)
 
 while True:
     # TODO: Se SW1 pressionado, buzzer.freq(440) e duty(512)

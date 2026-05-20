@@ -1,4 +1,4 @@
-# Experimento 9 — Wi-Fi e Web Server
+# Experimento 09 — Wi-Fi e Servidor Web (IoT)
 # Professor: Prof. Me. João Miguel Lac Roehe
 # Aluno: ___________________________  Data: ___/___/______
 #

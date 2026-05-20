@@ -1,4 +1,4 @@
-# Experimento 4 — RGB e PWM
+# Experimento 04 — LED RGB e PWM
 # Professor: Prof. Me. João Miguel Lac Roehe
 # Aluno: ___________________________  Data: ___/___/______
 #
