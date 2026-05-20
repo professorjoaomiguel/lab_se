@@ -37,7 +37,7 @@ O **Lab SE** foi estruturado para fornecer uma trilha de aprendizado prática, p
 Os laboratórios estão organizados na pasta `experiments/`. Cada experimento segue este padrão:
 
 - `README.md`: Explicação teórica, componentes e tabela de pinagem.
-- `template.py`: **Arquivo do Aluno.** Contém a estrutura base e marcações `# TODO` para implementação.
+- `labXX_template.py`: **Arquivo do Aluno.** Contém a estrutura base e marcações `# TODO` para implementação.
 - `main.py`: Solução de referência do professor.
 
 ### 🧪 Lista de Experimentos Disponíveis
@@ -79,7 +79,7 @@ Siga os passos abaixo para preparar seu ambiente e começar os experimentos:
 
 5. **Desenvolva os Experimentos:**
    - Escolha o experimento da semana (ex: `experiments/01_pisca_pisca/`).
-   - Abra o `template.py` e preencha seu nome e data.
+   - Abra o arquivo de template correspondente (ex: `lab01_template.py`) e preencha seu nome e data.
    - Complete os desafios indicados nos comentários `# TODO`.
    - Teste no hardware pressionando **F5** no Thonny.
    - Responda à **Reflexão Obrigatória** no final do arquivo.
@@ -99,7 +99,7 @@ Incentivamos o uso da IA como tutor. Antes de começar, leia o [**Guia de Uso Sa
 Para que sua atividade seja validada, você deve cumprir:
 1. **Etapa Intermediária:** Hardware validado (print ou componente operando).
 2. **Etapa Final:** Implementação completa da lógica proposta.
-3. **Reflexão Técnica:** Preenchimento da pergunta teórica no `template.py`.
+3. **Reflexão Técnica:** Preenchimento da pergunta teórica no arquivo de template (`labXX_template.py`).
 4. **Explicação Oral:** Capacidade de explicar qualquer linha do código se solicitado.
 
 ---

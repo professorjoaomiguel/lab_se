@@ -9,7 +9,7 @@
 - LED Vermelho (GPIO 13)
 
 ## Entregáveis
-- `template.py` completado com as duas etapas de temporização.
+- `lab01_template.py` completado com as duas etapas de temporização.
 - Demonstração dos LEDs alternando a cada 500ms.
 
 ---

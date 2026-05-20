@@ -44,14 +44,14 @@ Pressione **Enter**. O ESP32 deve responder imediatamente. Se funcionar, o ambie
 
 ### Passo 1 — Abrir o arquivo de template
 
-Cada experimento possui um arquivo `template.py` com o esqueleto do código. No Thonny:
+Cada experimento possui um arquivo de template (`labXX_template.py`) com o esqueleto do código. No Thonny:
 
 - **Arquivo → Abrir → Este computador**
-- Navegue até `experiments/0X_nome_do_experimento/template.py`
+- Navegue até `experiments/0X_nome_do_experimento/labXX_template.py` (ex: `lab01_template.py`)
 
 ### Passo 2 — Completar o código
 
-Leia o `README.md` do experimento e preencha as partes marcadas com `# TODO` no `template.py`. O arquivo `main.py` contém a solução completa como referência.
+Leia o `README.md` do experimento e preencha as partes marcadas com `# TODO` no arquivo de template (`labXX_template.py`). O arquivo `main.py` contém a solução completa como referência.
 
 ### Passo 3 — Salvar no ESP32
 
