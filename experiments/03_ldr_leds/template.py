@@ -18,6 +18,7 @@ from time import sleep
 
 ldr = ADC(Pin(1))
 ldr.atten(ADC.ATTN_11DB)
+ldr.width(ADC.WIDTH_12BIT)
 led = Pin(13, Pin.OUT)
 
 while True:

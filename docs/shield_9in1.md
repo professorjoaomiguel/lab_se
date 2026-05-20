@@ -8,9 +8,9 @@
 
 ## Visão Geral
 
-O **Shield 9-em-1** (9-in-1 Multifunctional Expansion Board) é um shield no form factor do Arduino UNO que integra nove componentes eletrônicos na mesma placa, eliminando a necessidade de protoboard e fios para os experimentos mais comuns.
+O **Shield 9-em-1** (9-in-1 Multifunctional Expansion Board) é um shield no form factor do Arduino UNO que integra nove componentes eletrônicos na mesma placa.
 
-Neste laboratório o shield é encaixado sobre um ESP32 com form factor Arduino UNO e programado em **MicroPython**.
+Neste laboratório, o shield é encaixado sobre uma placa **ESP32 UNO** (disponível em [tztstore.com](https://www.tztstore.com/goods/show-6284.html)) e programado em **MicroPython**.
 
 ---
 
@@ -63,14 +63,19 @@ A tabela abaixo relaciona o pino do shield (numeração Arduino) com o GPIO corr
 
 ## Experimentos Disponíveis neste Repositório
 
+Os experimentos foram organizados em uma trilha pedagógica de complexidade crescente, cobrindo todos os periféricos do shield multifuncional:
+
 | Experimento | Componente do Shield | Link |
 |-------------|----------------------|------|
-| [01 – Botões](../experiments/01_botoes/) | Botões SW1 e SW2 | GPIO 18 / GPIO 17 |
-| [02 – Fotocélula e LEDs](../experiments/02_ldr_leds/) | LDR + LEDs | GPIO 1 / GPIO 12,13 |
-| [03 – LED RGB com LDR](../experiments/03_rgb_ldr/) | RGB + LDR | GPIO 9,10,11 / GPIO 1 |
-| [04 – Pisca-pisca](../experiments/04_pisca_pisca/) | LEDs | GPIO 12, 13 |
-| [05 – Sensor LM35](../experiments/05_lm35/) | Sensor LM35 | GPIO 2 |
-| [06 – Potenciômetro](../experiments/06_potenciometro/) | Potenciômetro | GPIO 36 |
+| [01 – Pisca-pisca com LEDs](../experiments/01_pisca_pisca/) | LED Azul (D12) e LED Vermelho (D13) | GPIO 12 / GPIO 13 |
+| [02 – Botões e Interação](../experiments/02_botoes/) | Botões SW1 e SW2 + LED Azul | GPIO 18 / GPIO 17 / GPIO 12 |
+| [03 – Fotocélula (LDR) e Histerese](../experiments/03_ldr_leds/) | LDR (fotocélula) + LED Vermelho | GPIO 1 / GPIO 13 |
+| [04 – LED RGB e PWM](../experiments/04_rgb_ldr/) | LED RGB Verde e Vermelho + LDR | GPIO 10 / GPIO 9 / GPIO 1 |
+| [05 – Sensor de Temperatura LM35](../experiments/05_lm35/) | Sensor LM35 | GPIO 2 |
+| [06 – Dimer com Potenciômetro](../experiments/06_potenciometro/) | Potenciômetro + LED Azul (PWM) | GPIO 36 / GPIO 12 |
+| [07 – Buzzer e Frequência](../experiments/07_buzzer/) | Buzzer Piezoelétrico + Botões | GPIO 5 / GPIO 18, 17 |
+| [08 – Sensor DHT11](../experiments/08_dht11/) | Sensor DHT11 + LED Vermelho | GPIO 4 / GPIO 13 |
+| [09 – Wi-Fi e Servidor Web (IoT)](../experiments/09_wifi/) | Wi-Fi + Potenciômetro | Chip interno / GPIO 36 |
 
 ---
 
@@ -89,36 +94,6 @@ O repositório original contém exemplos em Arduino C++ que podem servir de refe
 
 ---
 
-## Periféricos Ainda Não Cobertos pelos Experimentos
+## 🎯 Cobertura Total de Periféricos
 
-Os seguintes componentes do shield ainda não possuem experimento dedicado neste repositório e podem ser explorados como atividade de extensão:
-
-| Componente | GPIO ESP32 | Sugestão de Experimento |
-|-----------|-----------|------------------------|
-| **Buzzer** | GPIO 5 | Gerar tons musicais variando frequência com `PWM` |
-| **DHT11** | GPIO 4 | Medir temperatura e umidade usando a biblioteca `dht` do MicroPython |
-
-### Biblioteca DHT no MicroPython
-
-O MicroPython inclui suporte nativo ao DHT11:
-
-```python
-import dht
-from machine import Pin
-
-sensor = dht.DHT11(Pin(4))
-sensor.measure()
-print("Temperatura:", sensor.temperature(), "°C")
-print("Umidade:    ", sensor.humidity(), "%")
-```
-
-### Buzzer com PWM no MicroPython
-
-```python
-from machine import Pin, PWM
-import time
-
-buzzer = PWM(Pin(5), freq=440, duty=512)  # Lá (440 Hz)
-time.sleep(1)
-buzzer.deinit()  # Desliga o buzzer
-```
+Com a reestruturação pedagógica recente, **100% dos periféricos do Shield 9-em-1** encontram-se cobertos por experimentos práticos em MicroPython neste repositório. Isso garante uma experiência completa de IoT e Sistemas Embarcados para os estudantes, avançando desde entradas e saídas básicas até conectividade de rede e monitoramento web em tempo real.

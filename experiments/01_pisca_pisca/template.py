@@ -17,15 +17,11 @@ from machine import Pin
 from time import sleep
 
 # TODO: Configure os pinos 12 e 13 como saída
-led_azul = Pin(12, Pin.OUT)
-led_vermelho = Pin(13, Pin.OUT)
+# led_azul = Pin(..., Pin.OUT)
+# led_vermelho = Pin(..., Pin.OUT)
 
 while True:
-    # --- Início da Etapa 2 ---
-    led_azul.on()
-    led_vermelho.off()
-    sleep(0.5)
-    
-    led_azul.off()
-    led_vermelho.on()
-    sleep(0.5)
+    # TODO: Etapa 1 - Faça apenas o LED Azul (D12) piscar.
+    # TODO: Etapa 2 - Faça os LEDs D12 e D13 piscarem alternadamente a cada 500ms.
+    pass
+

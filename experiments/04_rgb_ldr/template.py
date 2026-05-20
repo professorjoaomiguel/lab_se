@@ -19,6 +19,8 @@ from utils import map_value
 
 led_verde = PWM(Pin(10), freq=1000)
 ldr = ADC(Pin(1))
+ldr.atten(ADC.ATTN_11DB)
+ldr.width(ADC.WIDTH_12BIT)
 
 while True:
     valor_ldr = ldr.read()

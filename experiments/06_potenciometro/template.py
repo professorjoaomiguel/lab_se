@@ -18,6 +18,8 @@ from time import sleep
 from utils import map_value
 
 pot = ADC(Pin(36))
+pot.atten(ADC.ATTN_11DB)
+pot.width(ADC.WIDTH_12BIT)
 led = PWM(Pin(12), freq=1000)
 
 while True:

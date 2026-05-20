@@ -16,18 +16,18 @@
 import network
 import socket
 from machine import ADC, Pin
+import time
 
 # TODO: Preencha com os dados da rede local
 SSID = "___"
 PASSWORD = "___"
 
 def conecta():
-    wlan = network.WLAN(network.STA_IF)
-    wlan.active(True)
-    wlan.connect(SSID, PASSWORD)
-    while not wlan.isconnected():
-        pass
-    print("IP:", wlan.ifconfig()[0])
+    # TODO: Etapa 1 - Configure o Wi-Fi no modo Station (STA_IF), ative e conecte.
+    # Dica: use um loop 'while not wlan.isconnected():' com 'time.sleep(0.1)'
+    # para aguardar a conexão sem travar o processador do ESP32.
+    # No final, exiba o IP no terminal usando 'wlan.ifconfig()'.
+    pass
 
 # TODO: Implemente a lógica do servidor socket
 conecta()

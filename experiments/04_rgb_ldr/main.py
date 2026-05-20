@@ -2,40 +2,25 @@ from machine import Pin, ADC, PWM
 from time import sleep
 from utils import map_value
 
-led_green = PWM(Pin(10))
-led_green.freq(1000)
+# Configura o LED Verde (D10) com PWM
+led_verde = PWM(Pin(10))
+led_verde.freq(1000)
 
-led_red = PWM(Pin(9))
-led_red.freq(1000)
-
-
-def off():
-    led_green.duty(0)
-    led_red.duty(0)
-
-
+# Configura o LDR (GPIO 1)
 ldr = ADC(Pin(1))
 ldr.atten(ADC.ATTN_11DB)
 ldr.width(ADC.WIDTH_12BIT)
 
+print("Iluminação Inteligente com PWM Iniciada...")
+
 while True:
-    valor = ldr.read()
-    print("LDR:", valor)
+    valor_ldr = ldr.read()
     
-    if valor < 1500:
-        # Pouca luz: LED verde brilha inversamente à luz
-        intensidade = map_value(valor, 0, 1500, 1023, 0)
-        off()
-        led_green.duty(intensidade)
-    elif valor < 3000:
-        # Transição: LED verde brilha proporcionalmente à luz
-        intensidade = map_value(valor, 1500, 3000, 0, 1023)
-        off()
-        led_green.duty(intensidade)
-    else:
-        # Muita luz: LED vermelho brilha proporcionalmente à luz
-        intensidade = map_value(valor, 3000, 4095, 0, 1023)
-        off()
-        led_red.duty(intensidade)
-        
-    sleep(0.1)
+    # Mapeia leitura do LDR (0 a 4095) para o ciclo de trabalho do PWM (0 a 1023)
+    # Relação inversa: quanto menos luz externa, mais forte brilha o LED
+    brilho = map_value(valor_ldr, 0, 4095, 1023, 0)
+    
+    led_verde.duty(brilho)
+    
+    print("LDR (Luz): {} | Brilho LED (PWM): {}".format(valor_ldr, brilho))
+    sleep(0.05)

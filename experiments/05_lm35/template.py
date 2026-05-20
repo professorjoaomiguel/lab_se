@@ -19,6 +19,7 @@ from utils import media_amostras
 
 lm35 = ADC(Pin(2))
 lm35.atten(ADC.ATTN_11DB)
+lm35.width(ADC.WIDTH_12BIT)
 
 while True:
     # TODO: Etapa 2 - leitura = media_amostras(lm35, 20)

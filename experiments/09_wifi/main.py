@@ -9,6 +9,8 @@ PASSWORD = "SENHA_DA_REDE"
 
 # Componentes
 pot = ADC(Pin(36))
+pot.atten(ADC.ATTN_11DB)
+pot.width(ADC.WIDTH_12BIT)
 
 def conecta_wifi():
     wlan = network.WLAN(network.STA_IF)
@@ -17,7 +19,7 @@ def conecta_wifi():
         print('Conectando ao Wi-Fi...')
         wlan.connect(SSID, PASSWORD)
         while not wlan.isconnected():
-            pass
+            time.sleep(0.1)
     print('Conectado! IP:', wlan.ifconfig()[0])
     return wlan.ifconfig()[0]
 
